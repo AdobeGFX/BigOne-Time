@@ -1,0 +1,7 @@
+name: BigOne Time
+main: me.BigOne.AdobeGFX.NorwayZaGa.Time.Time
+author: BigOne
+version: 1.0
+commands:
+   tid:
+     description: Changes your tine
