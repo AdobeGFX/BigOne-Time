@@ -14,7 +14,6 @@ public class Time extends JavaPlugin
 	public ChatColor green = ChatColor.GREEN;
 	String console = red + "Denne kommandoen kan bare bli kjørt av en spiller!";
 	String permission = red + "Du har ikke permission til dette!";
-	String message1 = red + "skriv /tid <morgen - dag - kveld - natt>";
 
   
   public void onDisable() {
@@ -33,13 +32,16 @@ public class Time extends JavaPlugin
 		  return true;
 	  }
 	  Player p = (Player) sender;
-	  if (command.getName().equalsIgnoreCase("tid")) {
 		  if (!p.hasPermission("BigOne.time")) {
 			  p.sendMessage(permission);
 			  return true;
 		  }
 	  if (args.length == 0) {
-		  p.sendMessage(message1);
+		  p.sendMessage(green + "==(" + gray + "Tilgjengelige Tider" + green + ")==");
+		  p.sendMessage(gray + "/tid " + green + "<morgen / m>");
+		  p.sendMessage(gray + "/tid " + green + "<dag / d>");
+		  p.sendMessage(gray + "/tid " + green + "<kveld / k>");
+		  p.sendMessage(gray + "/tid " + green + "<natt / n>");
 		  return true;
 	  }
 		  if (args[0].equalsIgnoreCase("morgen") || args[0].equalsIgnoreCase("m")) {
@@ -67,6 +69,4 @@ public class Time extends JavaPlugin
 	  }
 	return false;
   }
-	return false;
-}
 }

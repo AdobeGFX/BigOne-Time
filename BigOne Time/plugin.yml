@@ -4,4 +4,4 @@ author: BigOne
 version: 1.0
 commands:
    tid:
-     description: Changes your tine
+     description: Changes your time
